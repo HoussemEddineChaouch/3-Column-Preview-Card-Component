@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Bright-orange : hsl(31, 77%, 52%) ;
+    --Dark-cyan : hsl(184, 100%, 22%) ;
+    --Very-dark-cyan : hsl(179, 100%, 13%) ;
+    
+    --Transparent-white-paragraphs : hsla(0, 0%, 100%, 0.75) ;
+    --Very-light-gray-b-h-b : hsl(0, 0%, 95%) ; 
+    --font-family-big-sh: 'Big Shoulders Display', cursive;
+    --font-family-Lexend: 'Lexend Deca', sans-serif;
+}
+body {
+    font-size: 15px;
+    background-color: var(--Very-light-gray-b-h-b);
+    font-family: var(--font-family-Lexend);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+   
+}
+
+.component {
+    width: 800px;
+    height: 400px;
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+    
+}
+.component > div {
+    width: calc(100% / 3);
+    padding: 30px;
+    position: relative;
+}
+.column img , .column h1 {  
+    margin-bottom: 20px;
+}
+.column h1 {
+    font-family: var(--font-family-big-sh);
+    text-transform: uppercase;
+    color: var(--Very-light-gray-b-h-b);
+    letter-spacing: 0.5px;
+}
+.column p {
+    line-height: 1.7;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    color: var(--Transparent-white-paragraphs);
+}
+.column {
+    position: relative;
+}
+.column button {
+    width: 150px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 30px;
+   
+}
+.column:nth-child(1) {
+    background-color: var(--Bright-orange);
+}
+.column:nth-child(1)  button {
+    color: var(--Bright-orange) ;
+}
+.column:nth-child(2) {
+    background-color: var(--Dark-cyan);
+}
+.column:nth-child(2) button {
+    color:  var(--Dark-cyan) ;
+}
+.column:nth-child(3) {
+    background-color: var(--Very-dark-cyan);
+}
+.column:nth-child(3) button {
+    color: var(--Very-dark-cyan) ;
+}
+@media (max-width : 768px ) {
+    .component {
+        flex-direction: column;
+        width: 90vw;
+        height: calc(100vh + 150px);
+        border-radius: 20px;
+        margin-top: 180px;
+        margin-bottom: 10px;
+    }
+    .component > div {
+        width: 100%;
+        height: calc(100% / 3);
+    }
+    
+}
